@@ -6,7 +6,7 @@ import Header from '../components/Header';
 export const metadata: Metadata = {
   title: 'Rattad24',
   icons: {
-    icon: "/logo.svg", 
+    icon: "/icon.png", 
   },
 };
 
