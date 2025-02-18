@@ -1,25 +1,20 @@
 import Link from "next/link";
-import { FaSearch, FaRegHeart , FaRegUser, FaRegClipboard } from "react-icons/fa";
+import { FaSearch, FaRegHeart, FaRegUser, FaRegClipboard } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="fixed bottom-0 left-0 w-full bg-white shadow-lg p-4 flex justify-around items-center border-t">
-      <Link href="/search" className="flex flex-col items-center ">
-        <FaSearch className="text-orange-500  font-thin  text-xl" />
-        <span className="text-sm">Otsing</span>
-      </Link>
-      <Link href="/favorites" className="flex flex-col items-center ">
-        <FaRegHeart className="text-orange-500   text-xl" />
-        <span className="text-sm">Lemmikud</span>
-      </Link>
-      <Link href="/featured" className="flex flex-col items-center ">
-        <FaRegClipboard className="text-orange-500   text-xl" />
-        <span className="text-sm">Esindused</span>
-      </Link>
-      <Link href="/profile" className="flex flex-col items-center ">
-        <FaRegUser className="text-orange-500   text-xl" />
-        <span className="text-sm">Profile</span>
-      </Link>
+    <div className="fixed bottom-0 left-0 w-full bg-white shadow-lg py-3 px-6 flex justify-between items-center border-t">
+      {[  
+        { href: "/search", icon: <FaSearch />, label: "Otsing" },
+        { href: "/favorites", icon: <FaRegHeart />, label: "Lemmikud" },
+        { href: "/featured", icon: <FaRegClipboard />, label: "Esindused" },
+        { href: "/profile", icon: <FaRegUser />, label: "Profile" }
+      ].map((item, index) => (
+        <Link key={index} href={item.href} className="flex flex-col items-center gap-1 text-gray-700">
+          <span className="text-orange-500 text-xl">{item.icon}</span>
+          <span className="text-sm font-medium">{item.label}</span>
+        </Link>
+      ))}
     </div>
   );
 };
