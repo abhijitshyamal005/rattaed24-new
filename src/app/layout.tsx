@@ -5,6 +5,9 @@ import SplashScreen from "./components/Loader/SplashScreen";
 
 export const metadata: Metadata = {
   title: "rattad24",
+  icons: {
+    icon:"/icon.png",
+  }
 };
 
 export default function RootLayout({
