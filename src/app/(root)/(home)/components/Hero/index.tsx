@@ -62,7 +62,7 @@ const Hero = () => {
 
       {/* Button */}
       <div className="mt-6">
-        <button className="w-full py-3 bg-orange-500 text-white text-lg font-bold rounded-lg">
+        <button className="w-full py-2 bg-orange-500 text-white text-lg font-normal rounded-lg">
           Broneeri teenus
         </button>
       </div>
