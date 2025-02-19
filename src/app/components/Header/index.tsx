@@ -29,7 +29,7 @@ const Header = () => {
         <div className="flex items-center space-x-4 text-orange-500">
           <div className="flex items-center space-x-1">
             <TbLocation size={18} />
-            <span className="text-black font-medium">Eesti</span>
+            <span className="text-black font-normal">Eesti</span>
           </div>
           <FiGlobe size={20} />
           <div className="relative">
