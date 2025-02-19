@@ -7,7 +7,7 @@ const Footer = () => {
       {[  
         { href: "/search", icon: <FaSearch />, label: "Otsing" },
         { href: "/favorites", icon: <FaRegHeart />, label: "Lemmikud" },
-        { href: "/featured", icon: <FaRegClipboard />, label: "Esindused" },
+        { href: "/esindused", icon: <FaRegClipboard />, label: "Esindused" },
         { href: "/profile", icon: <FaRegUser />, label: "Profiil" }
       ].map((item, index) => (
         <Link key={index} href={item.href} className="flex flex-col items-center gap-1 text-gray-700">
