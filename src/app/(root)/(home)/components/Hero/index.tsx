@@ -3,7 +3,7 @@ import { FaRegClipboard } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <section className="p-6 max-w-screen-lg -mt-20 mb-11">
+    <section className="p-6  -mt-20 mb-11">
       {/* Top Navigation Links */}
       <div className="flex justify-between gap-2 overflow-x-auto scrollbar-hide mb-4">
         {[
@@ -53,7 +53,7 @@ const Hero = () => {
             <img
               src={item.img}
               alt={item.text}
-              className="w-20 h-20 object-contain mb-1"
+              className="w-30 h-30 object-contain mb-1"
             />
             <span className="text-lg font-bold">{item.text}</span>
           </div>
