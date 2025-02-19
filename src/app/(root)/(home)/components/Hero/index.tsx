@@ -5,27 +5,41 @@ const Hero = () => {
   return (
     <section className="p-6 max-w-screen-lg -mt-20 mb-11">
       {/* Top Navigation Links */}
-      <div className="flex justify-between gap-2 mb-4">
+      <div className="flex justify-between gap-2 overflow-x-auto scrollbar-hide mb-4">
         {[
           "Esindused ja kontaktid",
           "Minu otsingud ja lemmikud",
           "Rattad24 äriklientidele",
+          "Hinnakiri",
+          "Klienditeenindus",
         ].map((text, index) => (
           <div
             key={index}
-            className=" items-center gap-2 p-4 bg-gray-100 rounded-md"
+            className="flex flex-col items-start gap-1 px-3 py-2 bg-gray-100 rounded-md min-w-36"
           >
-            <FaRegClipboard className="text-orange-500" />
-            <span className="text-xs font-medium">{text}</span>
+            <FaRegClipboard className="text-orange-500 text-2xl" />
+            <span className="text-sm font-semibold">{text}</span>
           </div>
         ))}
       </div>
 
+      {/* Dotted Slider Indicator */}
+      <div className="flex justify-center space-x-1 mb-3">
+        {[...Array(4)].map((_, i) => (
+          <div
+            key={i}
+            className={`h-2 w-2 rounded-full ${
+              i === 0 ? "bg-gray-800" : "bg-gray-400"
+            }`}
+          />
+        ))}
+      </div>
+
       {/* Heading */}
-      <h2 className="text-2xl font-bold mb-2">Mis teid huvitab?</h2>
+      <h2 className="text-3xl font-bold mb-4">Mis teid huvitab?</h2>
 
       {/* Cards Section */}
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 gap-3">
         {[
           { img: "/p1.png", text: "Rehvid" },
           { img: "/p2.png", text: "Veljed" },
@@ -34,17 +48,21 @@ const Hero = () => {
         ].map((item, index) => (
           <div
             key={index}
-            className="bg-gray-100 rounded-lg p-4 flex flex-col items-start  shadow"
+            className="bg-gray-100 rounded-lg p-3 flex flex-col items-start shadow-md"
           >
-            <img src={item.img} alt={item.text} className="w-20 h-20 mb-2" />
-            <span className="text-lg font-semibold">{item.text}</span>
+            <img
+              src={item.img}
+              alt={item.text}
+              className="w-20 h-20 object-contain mb-1"
+            />
+            <span className="text-lg font-bold">{item.text}</span>
           </div>
         ))}
       </div>
 
       {/* Button */}
-      <div className="mt-4 mb-5">
-        <button className="w-full py-2 bg-orange-500 text-white text-md font-semibold rounded-lg">
+      <div className="mt-6">
+        <button className="w-full py-3 bg-orange-500 text-white text-lg font-bold rounded-lg">
           Broneeri teenus
         </button>
       </div>
